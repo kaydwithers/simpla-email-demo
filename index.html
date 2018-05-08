@@ -42,50 +42,82 @@
 
   <body>
 
+    <div class="">
+
+      <simpla-collection sid="faqs">
+        <template>
+          <div sid="[item]">
+            <h6><simpla-text sid="question"></simpla-text></h6>
+            <p><simpla-text sid="answer"></simpla-text></p>
+          </div>
+        </template>
+      </simpla-collection>
+
+    </div>
+
     <div class="email-sample">
+
+      <!-- Preheader -->
       <h4 class="font-styles"><b>Preheader:</b> 
         <simpla-text path="/introduction/heading" placeholder="Type something…">
           [Default] Preheader
         </simpla-text>
       </h4>
-    </div>
+  
+      <div bgcolor="#f8f8f8">
+        <div style="letter-spacing: 746px; line-height: 0; mso-hide: all" class="gmailfix">&nbsp;</div>
+  
+        <div style="background-color:#f8f8f8">
+          <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" style="width:100%">
+            <tbody>
+  
+              <!-- Article -->
+              <simpla-collection sid="article">
+                <template>
+                  <div sid="[item]">
 
-    <main>
-      <div class="">
+                    <tr>
+                      <td class="image-300" align="center" valign="top" bgcolor="#ffffff" 
+                        style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"
+                      >
+                        <a href="http://#" style="display:block;" target="_blank">
+                          <img class="fade" 
+                            width="700" 
+                            alt="Proof that Celeste Barber and Holden Equinox have nothing to prove." 
+                            title="View Article" 
+                            path="/demo/simpla-img/default"
+                            placeholder="url(https://placehold.it/700x280)"
+                            is="simpla-img"
+                            sid="image"
+                            border="0" 
+                            style="display:block;border-width:0;-ms-interpolation-mode:bicubic;font-size: 11px;color:#666666"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pad-v-10" align="center" style="padding-top:20px;padding-left:40px;padding-right:40px;font-family: verdana,Arial, sans-serif; font-size:24px; color:#000; padding-bottom:5px">
+                        <a target="_blank" href="#" style="color:#000;text-decoration:none;" title="Read more">
+                          <simpla-text sid="title"></simpla-text>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pad-5-b-30" align="center" style="padding-top:20px;padding-bottom:45px;padding-left:40px;padding-right:40px;font-family: verdana,Arial, sans-serif; font-size:14px; line-height:21px;color:#666666"> 
+                        <simpla-text sid="content"></simpla-text> <a target="_blank" href="http://holden.createsend1.com/t/y-l-kjouyd-l-h/" style="color:#262626;text-decoration:underline;" title="Read more"> Click here to read more.</a>
+                      </td>
+                    </tr>
 
-        <div class="">
-          <h2>
-            <simpla-text path="/introduction/heading" placeholder="Type something…">
-              [PH] Introduction Heading
-            </simpla-text>
-          </h2>
-          <p>
-            <simpla-text path="/introduction/paragraph" placeholder="Type something…" plaintext>
-              [PH] Introduction Paragraph
-            </simpla-text>
-          </p>
+                  </div>
+                </template>
+              </simpla-collection>
+  
+            </tbody>
+          </table>
         </div>
-    
-        <h6>Simpla Collection</h6>
-        <simpla-collection sid="faqs">
-          <template>
-            <div sid="[item]">
-              <h6><simpla-text sid="question"></simpla-text></h6>
-              <p><simpla-text sid="answer"></simpla-text></p>
-            </div>
-          </template>
-        </simpla-collection>
-
+  
       </div>
-    </main>
-
-
-
-    <footer class="">
-      <div class="">
-        <p class="">© Young Coders ʕ•ᴥ•ʔ</p>
-      </div>
-    </footer>
+    </div>
 
   </body>
 </html>
