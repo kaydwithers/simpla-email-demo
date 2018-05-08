@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Young Coders ʕ•ᴥ•ʔ — Coding workshops for kids, teachers and all ages.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Include Simpla, Netlify auth adapter, and cross-browser polyfill-->
+    <script src="https://unpkg.com/simpla@^3.0.0"></script>
+    <script src="https://unpkg.com/simpla@^3.0.0/adapters/netlify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js" async></script>
+
+    <!-- Init Simpla -->
+    <script>
+      Simpla.init({
+        // The Github repo you want Simpla to use
+        repo: 'donnagal/simpla-email-demo',
+        // Netlify auth adapter, initialize with your Netlify site name
+        auth: new SimplaNetlify({ site: 'simpla-demo' }),
+        // Public content source (optional)
+        // Defaults to fetching directly from Github
+        source: 'https://simpla-demo.netlify.com/'
+      });
+    </script>
+
+    <!-- Import Simpla elements -->
+    <link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
+    <link rel="import" href="/bower_components/simpla-article/simpla-article.html">
+    <link rel="import" href="/bower_components/simpla-collection/simpla-collection.html">
+    <link rel="import" href="/bower_components/simpla-img/simpla-img.html">
+    <link rel="import" href="/bower_components/simpla-link/simpla-link.html">
+    <link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+
+  </head>
+
+  <body>
+
+    <div class="email-sample">
+      <h4 class="font-styles"><b>Preheader:</b> 
+        <simpla-text path="/introduction/heading" placeholder="Type something…">
+          [Default] Preheader
+        </simpla-text>
+      </h4>
+    </div>
+
+    <main>
+      <div class="">
+
+        <div class="">
+          <h2>
+            <simpla-text path="/introduction/heading" placeholder="Type something…">
+              [PH] Introduction Heading
+            </simpla-text>
+          </h2>
+          <p>
+            <simpla-text path="/introduction/paragraph" placeholder="Type something…" plaintext>
+              [PH] Introduction Paragraph
+            </simpla-text>
+          </p>
+        </div>
+    
+        <h6>Simpla Collection</h6>
+        <simpla-collection sid="faqs">
+          <template>
+            <div sid="[item]">
+              <h6><simpla-text sid="question"></simpla-text></h6>
+              <p><simpla-text sid="answer"></simpla-text></p>
+            </div>
+          </template>
+        </simpla-collection>
+
+      </div>
+    </main>
+
+
+
+    <footer class="">
+      <div class="">
+        <p class="">© Young Coders ʕ•ᴥ•ʔ</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
