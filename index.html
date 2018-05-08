@@ -19,8 +19,10 @@
       Simpla.init({
         // The Github repo you want Simpla to use
         repo: 'kaydwithers/simpla-email-demo',
+
         // Netlify auth adapter, initialize with your Netlify site name
         auth: new SimplaNetlify({ site: 'simpla-email-demo' }),
+
         // Public content source (optional)
         // Defaults to fetching directly from Github
         source: 'https://simpla-email-demo.netlify.com/'
@@ -44,6 +46,7 @@
       <!-- Preheader -->
       <h4><b>Preheader:</b> <simpla-text path="/introduction/preheader" placeholder="Type a preheader…">[Default] preheader</simpla-text></h4>
 
+      <!-- Heading -->
       <h1><simpla-text path="/introduction/heading" placeholder="Type a heading">[Default] heading</simpla-text></h1>
 
       <!-- Article -->
@@ -51,7 +54,7 @@
         <template>
           <div sid="[item]">
 
-            <!-- creates a path /article/item/image -->
+            <!-- Creates a unique path. i.e /article/itemA/image -->
             <img 
               alt="" 
               class="" 
@@ -62,7 +65,12 @@
 
             <h4><simpla-text sid="title" placeholder="Type title…">[Default] title</simpla-text></h4>
 
-            <p><simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> <simpla-link sid="href" placeholder="Type link…"><simpla-text sid="linkText" placeholder="Type linkText…">[Default] linkText</simpla-text></simpla-link></p>
+            <p>
+              <simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> 
+              <simpla-link sid="href" placeholder="Type href…">
+                <simpla-text sid="linkText" placeholder="Type linkText…">[Default] linkText</simpla-text>
+              </simpla-link>
+            </p>
             
           </div>
         </template>
