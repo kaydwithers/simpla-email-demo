@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Young Coders ʕ•ᴥ•ʔ — Coding workshops for kids, teachers and all ages.</title>
+    <title>Simpla Email Demo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -42,38 +39,32 @@
 
   <body>
 
-    <div class="email-sample">
+    <!-- Preheader -->
+    <h4 class="font-styles"><b>Preheader:</b> 
+      <simpla-text path="/introduction/heading" placeholder="Type preheader…">[Default] Preheader</simpla-text>
+    </h4>
 
-      <!-- Preheader -->
-      <h4 class="font-styles"><b>Preheader:</b> 
-        <simpla-text path="/introduction/heading" placeholder="Type preheader…">
-          [Default] Preheader
-        </simpla-text>
-      </h4>
+    <!-- Article -->
+    <simpla-collection sid="article">
+      <template>
+        <div sid="item">
 
-      <!-- Article -->
-      <simpla-collection sid="article">
-        <template>
-          <div sid="item">
+          <!-- creates a path /article/item/image -->
+          <img 
+            alt="" 
+            class="" 
+            placeholder="url(https://placehold.it/700x280)" 
+            is="simpla-img" 
+            sid="image" 
+            width="700" 
+          />
 
-            <!-- creates a path /article/item/image -->
-            <img 
-              alt="" 
-              class="" 
-              placeholder="url(https://placehold.it/700x280)" 
-              is="simpla-img" 
-              sid="image" 
-              width="700" 
-            />
+          <h4><simpla-text sid="title" placeholder="Type title…">[Default] title</simpla-text></h4>
 
-            <h4><simpla-text sid="title" placeholder="Type title…">[Default] title</simpla-text></h4>
-
-            <p><simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> <simpla-link sid="link" path="/link">Click here to read more ></simpla-link></p>
-          </div>
-        </template>
-      </simpla-collection>
-
-    </div>
+          <p><simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> <simpla-link sid="link">Click here to read more ></simpla-link></p>
+        </div>
+      </template>
+    </simpla-collection>
 
   </body>
 </html>
