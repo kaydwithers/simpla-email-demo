@@ -12,4 +12,4 @@
 `git push -u origin master`
 
 ### Bower packages
-`bower i simpla-text simpla-img simpla-admin simpla-article simpla-link simpla-collection --save`
+`bower i simpla-text simpla-img simpla-admin simpla-article simpla-link simpla-collection simpla-paths --save`

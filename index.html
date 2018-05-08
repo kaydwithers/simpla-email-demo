@@ -34,6 +34,7 @@
     <link rel="import" href="/bower_components/simpla-img/simpla-img.html">
     <link rel="import" href="/bower_components/simpla-link/simpla-link.html">
     <link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+    <link rel="import" href="/bower_components/simpla-paths/simpla-paths.html">
 
   </head>
 
@@ -41,18 +42,14 @@
     <main>
 
       <!-- Preheader -->
-      <h4><b>Preheader:</b> 
-        <simpla-text path="/introduction/preheader" placeholder="Type a preheader…">[Default] preheader</simpla-text>
-      </h4>
+      <h4><b>Preheader:</b><simpla-text path="/introduction/preheader" placeholder="Type a preheader…">[Default] preheader</simpla-text></h4>
 
-      <h1>
-        <simpla-text path="/introduction/heading" placeholder="Type a heading">[Default] heading</simpla-text>
-      </h1>
+      <h1><simpla-text path="/introduction/heading" placeholder="Type a heading">[Default] heading</simpla-text></h1>
 
       <!-- Article -->
       <simpla-collection sid="article">
         <template>
-          <div sid="item">
+          <div sid="[item]">
 
             <!-- creates a path /article/item/image -->
             <img 
@@ -61,12 +58,11 @@
               placeholder="url(https://placehold.it/700x280)" 
               is="simpla-img" 
               sid="image" 
-              width="700" 
             />
 
             <h4><simpla-text sid="title" placeholder="Type title…">[Default] title</simpla-text></h4>
 
-            <p><simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> <simpla-link sid="link">Click here to read more ></simpla-link></p>
+            <p><simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> <simpla-link sid="link" placeholder="Click here >">[Default] link</simpla-link></p>
             
           </div>
         </template>
